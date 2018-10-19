@@ -1,0 +1,40 @@
+Pictorial Loop Lab Write Up
+Obuchi Adikema and Dongze Ye 
+2018/10/18
+
+1) The exit condition should be r_spot < l_spot. Our condition is correct because based on the description, we know that when r_spot and l_spot overlap, there are    no more elements in the array that need to be examined.
+
+2, 3, & 4 ) 
+    Test Runs of partition(), select(), and median():
+    arr1:  42357
+    The pivot should be located at position #2
+    The second smallest element is 3
+    The median element is 4
+
+    arr3:  5713649
+    The pivot should be located at position #1
+    arr4:  5713649
+    The seventh smallest element is 9
+    arr6:  5713649
+    The median element is 5
+
+6) In invariantA(), we are ordering the flags colors by processing the array from left to right. We chose to declare our variables in invariantA() as
+   whiteLeft, blueLeft, and levftover because they are the only boundaires of which we need to keep track. By only using those three variables, we can keep 
+   track of the color boundaries while still making color exchanges within the array. In invariantD(), we process the unexamined colors from right to left 
+   and build the flag in the same order. Within the procedure we declare the variables leftoverLast, redRight, and whiteRight because they provide the 
+   minimum number of boundaries between colors in a similar manner to the variables declared in invariantA(). 
+
+9) 
+   Test Runs for invariantA (): 
+   flagA:  blue  blue  blue  blue  red  red  white  
+   After sorting,
+   flagA:  red  red  white  blue  blue  blue  blue  
+
+   Test Runs for invariantD():
+   flagD:  white  blue  blue  red  white  red  white  
+   After sorting,
+   red  red  white  white  white  blue  blue  
+
+
+
+
